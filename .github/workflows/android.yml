@@ -1,0 +1,23 @@
+name: Android APK
+on: [push, pull_request, workflow_dispatch]
+permissions:
+  contents: read
+jobs:
+  debug:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: recursive
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+      - uses: android-actions/setup-android@v3
+      - run: sdkmanager "platforms;android-36" "build-tools;35.0.0" "cmake;3.22.1" "ndk;27.0.12077973"
+      - run: bash gradlew :app:assembleDebug
+      - uses: actions/upload-artifact@v4
+        with:
+          name: Zapret-Mobile-debug
+          path: app/build/outputs/apk/debug/*universal*.apk
+          if-no-files-found: error

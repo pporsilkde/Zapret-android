@@ -1,0 +1,19 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:fillViewport="true">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical" android:gravity="center" android:padding="24dp">
+        <TextView android:id="@+id/state_label" android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:textSize="24sp"
+            android:accessibilityLiveRegion="polite" android:layout_marginBottom="20dp" />
+        <com.google.android.material.button.MaterialButton android:id="@+id/connect"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:minHeight="56dp" android:text="@string/connect_now" />
+        <com.google.android.material.button.MaterialButton android:id="@+id/apps"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:minHeight="52dp" android:layout_marginTop="8dp" />
+        <Button android:id="@+id/flow" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:text="Flowseal · Root" />
+    </LinearLayout>
+</ScrollView>

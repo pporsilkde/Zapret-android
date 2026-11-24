@@ -1,0 +1,10 @@
+<resources>
+    <string name="connect_now">Подключить</string>
+    <string name="disconnect_now">Отключить</string>
+    <string name="quick_apps">Приложения</string>
+    <string name="all_apps_quick">Все приложения</string>
+    <string name="custom_apps_quick">Свой список</string>
+    <string name="advanced_view">Расширенный экран</string>
+    <string name="simple_view">Простой экран</string>
+    <string name="missing_apps_quick">Установите приложение из выбранного списка либо выберите «Все приложения».</string>
+</resources>
